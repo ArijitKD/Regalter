@@ -38,7 +38,7 @@ build_exe_options = {"packages": ["tkinter", "ctypes", "os", "sys"], "include_fi
 setup  (name = "Regalter (64-bit)",
         target_name = "regalter_x64",
         copyright = "Copyright (c) 2021 Arijit Kumar Das.",
-        description = "Regalter: A simple utility for modifying the registered owner and organization names in Windows.",
+        description = "Regalter: A simple utility for changing the registered owner and registered organization names without messing with Windows registry.",
         options = {"build_exe": build_exe_options},
         executables = [Executable(script="main.py", base="Win32GUI",
                                   icon="assets\\icon.ico")])
