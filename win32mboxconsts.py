@@ -1,7 +1,35 @@
-CONST_DESCRIPTION_LINK = "docs.microsoft.com/en-gb/windows/win32/api/winuser/nf-winuser-messagebox?redirectedfrom=MSDN"
+'''
+Regalter: A simple utility for changing the registered owner and
+registered organization names without messing with Windows registry.
+This source code is for the 64-bit version of Regalter, created
+exclusively for running on 64-bit Windows.
+
+This file is a part of Regalter.
+
+Copyright (C) 2021 Arijit Kumar Das (Github: @ArijitKD)
+
+Regalter is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Regalter is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Regalter.  If not, see <https://www.gnu.org/licenses/>.
+'''
+
+# This script defines some constants related to the win32 MessageBox functions.
+# These constants specify how each win32 messagebox should behave. For more details
+# about these, refer to the link assigned as the value of DESCRIPTION_LINK below.
+
+DESCRIPTION_LINK = "docs.microsoft.com/en-gb/windows/win32/api/winuser/nf-winuser-messagebox?redirectedfrom=MSDN"
 
 print ("\nModule win32mboxconsts")
-print ("Refer to", CONST_DESCRIPTION_LINK, "for a complete description of the constants defined here.\n")
+print ("Refer to", DESCRIPTION_LINK, "for a complete description of the constants defined here.\n")
 
 # Buttons
 MB_ABORTRETRYIGNORE = 0x00000002
