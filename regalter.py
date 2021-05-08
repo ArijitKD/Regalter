@@ -4,7 +4,7 @@ registered organization names without messing with Windows registry.
 This source code is for the 64-bit version of Regalter, created
 exclusively for running on 64-bit Windows.
 
-This program is a part of Regalter.
+This file is a part of Regalter.
 
 Copyright (C) 2021 Arijit Kumar Das (Github: @ArijitKD)
 
