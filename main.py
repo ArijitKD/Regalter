@@ -145,9 +145,7 @@ gui.root_window.lift()
 # We will not use tkinter's mainloop() function as it simply blocks program execution instead of iterating it.
 # The while loop below would serve as the mainloop of the program.
 while (1):
-        
-    try:
-            
+    try:       
        #gui.force_center_window() # Force the window to stay at the center of the screen
             
        gui.update_x86_entries()
