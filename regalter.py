@@ -26,7 +26,6 @@ along with Regalter.  If not, see <https://www.gnu.org/licenses/>.
 import tkinter as tk, tkinter.ttk as ttk, wmi, winreg, sys, ctypes
 from time import sleep
 from os import startfile, path, environ
-from platform import architecture
 import win32mboxconsts as mboxconst # This module contain all the constants related to messagebox functions
                                     # in Windows
 
