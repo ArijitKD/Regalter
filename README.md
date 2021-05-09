@@ -11,13 +11,25 @@ PC's ownership to someone else and he/she wishes to change the registered owner 
 for the user.
 
 # Notes
-This source code available here is for the 64-bit version of Regalter, created exclusively for running on 64-bit Windows. I will be 
-uploading the code for the 32-bit version very soon, with some minor changes to the 64-bit source file (regalter.py). This code has
-only been tested on Windows 7 and Windows 10, but it should work on the previous versions of Windows too (although I'm not sure about
-the previous ones), just informing this in the highly unlikely event someone might be interested in rigorously test out my code's
-compatibility. Please note that you may need to install some of the modules used first before you run the program. You can install
-them through pip, using the command: pip install <module_name> through a terminal. You also must have Python 3.x.x installed on your
-system.
+There are two versions of the source files, 64-bit and 32-bit. The 32-bit source files are in the directory named 'x86'. The
+existence of different source files (almost similar though) for 32-bit and 64-bit versions of Regalter is due to the architecture
+of Windows Registry wherein 32-bit programs are redirected to WOW6432Node under HKEY_LOCAL_MACHINE\SOFTWARE\ in the Windows Registry.
+The 64-bit version of Regalter has been designed to look for the values of RegisteredOwner and RegisteredOrganization at two locations
+in the Registry, i.e., under HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ (which is accessible to 64-bit programs only) and under
+HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\ (which is accessible to both 64-bit and 32-bit programs). The former
+location is inaccessible to 32-bit programs and hence the values at the latter location also need to be modified. This is, however,
+not the case with the 32-bit version of Regalter and values of RegisteredOwner and RegisteredOrganization are only searched under
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\. Note that the 32-bit version of Regalter may be able to run on 64-bit Windows, but
+will fail to modify the values under HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ and will only be able to modify the values under
+HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\, since the former location is not accessible to 32-bit applications. Hence,
+it is recommended to check your Windows architecture before using either the 32-bit or 64-bit version of Regalter and make sure that
+the architectures of Windows and Regalter match to get the correct results.
+
+Regalter has only been tested on Windows 7 and Windows 10, but it should work on the previous versions of Windows too (although I'm
+not sure about the previous ones), just informing this in the highly unlikely event someone might be interested in rigorously test
+out my code's compatibility. Please note that you may need to install some of the modules used first before you run the program. You
+can install them through pip, using the command: pip install <module_name> through a terminal. You also must have Python 3.x.x
+installed on your system.
 
 # Copyright notice
 Here is the notice which has been included with all the source code files:
