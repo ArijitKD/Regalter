@@ -25,7 +25,7 @@ along with Regalter.  If not, see <https://www.gnu.org/licenses/>.
 import elevate, ctypes, win32mboxconsts as mboxconst, tkinter as tk, winreg
 from time import sleep
 
-APP_NAME = "Regalter: GUI modifier for Windows owner and organization (64-bit)"
+APP_NAME = "Regalter (64-bit)"
 
 import regalter as rg
 mbox = rg.mbox
@@ -162,7 +162,7 @@ while (1):
     # When the root window has been destroyed but this while loop is still running, tkinter.TclError will be
     # raised in the try block. The except block below will ensure that the program exits safely.
     except tk.TclError:
-       print ("Closed "+APP_NAME[0:APP_NAME.index(":")]+" without any errors.")
+       print ("Closed "+APP_NAME[0:APP_NAME.index(" ")]+" without any errors.")
        raise SystemExit
 
     sleep(0.01) # This would prevent high CPU usage because of the main loop
