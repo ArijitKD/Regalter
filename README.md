@@ -12,8 +12,13 @@ for the user.
 
 # Notes
 There are two versions of the source files, 64-bit and 32-bit. The 32-bit source files are in the directory named 'x86'. The
-existence of different source files (almost similar though) for 32-bit and 64-bit versions of Regalter is due to the architecture
-of Windows Registry wherein 32-bit programs are redirected to WOW6432Node under HKEY_LOCAL_MACHINE\SOFTWARE\ in the Windows Registry.
+existence of different source files (almost similar though) for 32-bit and 64-bit versions of Regalter is due to the different architectures
+of Windows Registry for 32-bit and 64-bit Windows. To learn more about 32-bit and 64-bit Registry, refer to the links below:
+
+i)  https://docs.microsoft.com/en-us/windows/win32/sysinfo/32-bit-and-64-bit-application-data-in-the-registry
+
+ii) https://stackoverflow.com/questions/869783/windows-64-bit-registry-v-s-32-bit-registry
+
 The 64-bit version of Regalter has been designed to look for the values of RegisteredOwner and RegisteredOrganization at two locations
 in the Registry, i.e., under HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\ (which is accessible to 64-bit programs only) and under
 HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\ (which is accessible to both 64-bit and 32-bit programs). The former
