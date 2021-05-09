@@ -188,22 +188,22 @@ class Regalter:
         # Placing all the buttons, labels and entries at appropriate positions on the window
         '''[WIDGETS_x64]'''
         self.winver_button.place(x=10, y=20, width=150)    
-        self.owner_label.place(x=10, y=60+30)
-        self.owner_entry.place(x=200, y=60+30, width = 420)
-        self.org_label.place(x=10, y=110+30)
-        self.org_entry.place(x=200, y=110+30, width = 420)
+        self.owner_label.place(x=10, y=90)
+        self.owner_entry.place(x=200, y=90, width = 420)
+        self.org_label.place(x=10, y=140)
+        self.org_entry.place(x=200, y=140, width = 420)
 
         '''[WIDGETS_x86]'''
         self.winver_button_x86.place(x=170, y=20, width=150)    
-        self.owner_label_x86.place(x=10, y=200+10)
-        self.owner_entry_x86.place(x=200, y=200+10, width = 420)
-        self.org_label_x86.place(x=10, y=250+10)
-        self.org_entry_x86.place(x=200, y=260+10, width = 420)
+        self.owner_label_x86.place(x=10, y=210)
+        self.owner_entry_x86.place(x=200, y=210, width = 420)
+        self.org_label_x86.place(x=10, y=260)
+        self.org_entry_x86.place(x=200, y=270, width = 420)
         
         '''[WIDGETS_BOTH]'''
-        self.change_btn.place(x=497, y=320+10, width = 125)
-        self.update_btn.place(x=300, y=320+10, width = 125)
-        self.about_btn.place(x=470, y=20, width = 150)
+        self.change_btn.place(x=471, y=330, width = 150)
+        self.update_btn.place(x=280, y=330, width = 150)
+        self.about_btn.place(x=471, y=20, width = 150)
 
 
 
@@ -383,7 +383,7 @@ arijitkdgit.official@gmail.com.
         self.org_entry.configure(state='normal', cursor='ibeam')
         self.change_btn.configure(text = "Change x86 values", command = self.change_button_x86)
         self.change_btn.place_forget()
-        self.change_btn.place(x=470, y=320, width = 150)
+        self.change_btn.place(x=471, y=330, width = 150)
 
 
 
