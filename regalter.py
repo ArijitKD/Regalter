@@ -32,7 +32,7 @@ import win32mboxconsts as mboxconst # This module contain all the constants rela
 
 
 mbox = ctypes.windll.user32.MessageBoxW # It's really a pain to write a long function name again and again, so we will
-                                            # store it in a variable with a short name.                                        
+                                        # store it in a variable with a short name.                                        
 # Constant(s)
 APP_NAME = "Regalter (64-bit)" # The default title for Regalter that
                                # will appear on the title bar.
@@ -41,7 +41,6 @@ WINDIR = environ['windir']
 
     
 class Regalter:
-
 
     '''[INITIALIZATION]'''
     def __init__(self, Initial_RegisteredOwner, Initial_RegisteredOrganization, Initial_RegisteredOwner_x86, Initial_RegisteredOrganization_x86):
@@ -233,8 +232,12 @@ along with Regalter. If not, see <https://www.gnu.org/licenses/>.
 
 For any suggestions or for reporting bugs, please send an e-mail to
 arijitkdgit.official@gmail.com.
-''', "About Regalter",
-                mboxconst.MB_OK | mboxconst.MB_TASKMODAL)
+''', 
+   "About Regalter",
+                   mboxconst.MB_OK | mboxconst.MB_TASKMODAL)
+
+
+
     # The function below gets executed whenever the Launch winver.exe button is pressed. This function starts
     # winver.exe if its not running, or restarts it if it was previously running.
     def launch_winver_button(self):
@@ -252,7 +255,7 @@ arijitkdgit.official@gmail.com.
         if (mbox(0,
                 "We will try to launch winver.exe. Please be patient. This will take a while.\n\nIf it takes a long time then manually start winver.exe using the following steps:\ni)   Open Command prompt\nii)  Type this: winver.exe && exit\niii) Press Enter/Return key",
                 "Delay alert",
-                mboxconst.MB_OKCANCEL | mboxconst.MB_ICONINFORMATION | mboxconst.MB_TASKMODAL) == mboxconst.IDCANCEL):
+                mboxconst.MB_OKCANCEL | mboxconst.MB_TASKMODAL) == mboxconst.IDCANCEL):
             self.winver_button.configure(state='normal', cursor='hand2') # Setting the original Launch winver.exe button attributes
             return
 
@@ -332,7 +335,7 @@ arijitkdgit.official@gmail.com.
         if (mbox(0,
                 "We will try to launch 32-bit version of winver.exe. Please be patient. This will take a while.\n\nIf it takes a long time then manually start winver.exe using the following steps:\ni)   Open Command prompt\nii)  Type this: %windir%\SysWOW64\winver.exe && exit\niii) Press Enter/Return key",
                 "Delay alert",
-                mboxconst.MB_OKCANCEL | mboxconst.MB_ICONINFORMATION | mboxconst.MB_TASKMODAL) == mboxconst.IDCANCEL):
+                mboxconst.MB_OKCANCEL | mboxconst.MB_TASKMODAL) == mboxconst.IDCANCEL):
             self.winver_button_x86.configure(state='normal', cursor='hand2') # Setting the original Launch winver.exe (x86) button attributes
             return
 
