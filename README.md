@@ -34,7 +34,7 @@ the architectures of Windows and Regalter match to get the correct results.
 
 Regalter has only been tested on Windows 7 and Windows 10, but it should work on the previous versions of Windows too (although I'm
 not sure about the previous ones), just informing this in the highly unlikely event someone is interested in rigorously testing
-out my code's compatibility. Please note that you may need to install some of the modules used first before you run the program. You
+out my code's compatibility. Please note that you may need to install some of the modules used before you can run the program. You
 can install them through pip, using the command: pip install <module_name> through a terminal. You also must have Python 3.x.x
 installed on your system.
 
