@@ -26,7 +26,7 @@ and `RegisteredOrganization` at two locations in the Windows 64-bit Registry, i.
 (which is accessible to 64-bit programs only) and under `HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\` (which is accessible
 to both 64-bit and 32-bit programs). The former location is inaccessible to 32-bit programs and hence the values at the latter location also
 need to be modified. This is, however, not the case with the 32-bit version of Regalter (**which has been exclusively designed to run on
-32-bit Windows**) and values of `RegisteredOwner` and `RegisteredOrganization` are only searched under `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\`.
+32-bit Windows**) and values of `RegisteredOwner` and `RegisteredOrganization` are searched and modified only under `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\`.
 Note that the 32-bit version of Regalter may be able to run on 64-bit Windows, but will fail to modify the values under `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\`
 and will only be able to modify the values under `HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\`, since the former location is
 not accessible to 32-bit applications on 64-bit Windows. Hence, it is recommended to check your Windows architecture before using either the
