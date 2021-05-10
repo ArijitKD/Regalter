@@ -2,7 +2,7 @@
 
 Regalter: A simple utility for changing the registered owner and registered organization names without messing with Windows registry.
 
-## Description
+## Possible uses of Regalter
 The recent releases of Windows 10 does not allow the user to enter the user and organization names during installation. Instead it
 asks the user to sign in with his/her Microsoft account. The user and organization names are extracted from the user's Microsoft
 account information. However, if the user skips signing in to his/her Microsoft account then the organization name is not written
@@ -10,7 +10,7 @@ to the Windows Registry. That is when you need a simple tool like Regalter. Agai
 PC's ownership to someone else and he/she wishes to change the registered owner and organization names, Regalter makes the work easy
 for the user.
 
-## Notes
+## Description
 There are two versions of the source files, 64-bit and 32-bit. The 32-bit source files are in the directory named 'x86'. The
 existence of different source files (almost similar though) for 32-bit and 64-bit versions of Regalter is due to the different architectures
 of Windows Registry for 32-bit and 64-bit Windows. To learn more about 32-bit and 64-bit Registry, refer to the links below:
