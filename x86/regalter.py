@@ -42,7 +42,6 @@ WINDIR = environ['windir']
     
 class Regalter:
 
-
     '''[INITIALIZATION]'''
     def __init__(self, Initial_RegisteredOwner, Initial_RegisteredOrganization):
 
