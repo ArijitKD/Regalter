@@ -24,11 +24,24 @@ along with Regalter.  If not, see <https://www.gnu.org/licenses/>.
 
 import ctypes, sys, win32mboxconsts as mboxconst, tkinter as tk, winreg
 from time import sleep
-
-APP_NAME = "Regalter (32-bit)"
-
+from os import environ
 import regalter as rg
-mbox = rg.mbox
+
+
+APP_NAME = rg.APP_NAME
+mbox = ctypes.windll.user32.MessageBoxW
+
+
+def Windows_is_WOW64():
+    try:
+        if (environ["PROCESSOR_ARCHITECTURE"] == "AMD64"):
+            return True
+        if ("PROCESSOR_ARCHITEW6432" in environ.keys()):
+            return (environ["PROCESSOR_ARCHITEW6432"] == "AMD64")
+        return False
+    except:
+        return -1
+
 '''
 # Regalter is OS-architecture-specific, and this code is for the 64-bit version of Windows, so we will perform
 # an architecture checking below (Alhough this is not required because Windows(32-bit) automatically performs 
@@ -51,6 +64,16 @@ if (not ctypes.windll.shell32.IsUserAnAdmin()):
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
 
 else:
+    if (Windows_is_WOW64() == -1):
+        print ("Unexpected exception in function Windows_is_WOW64(). Skipping WOW64 check.")
+
+    elif (Windows_is_WOW64()):
+        if (mbox(0, "We have detected that you are running Regalter (32-bit) on 64-bit Windows. Regalter (32-bit) will not work properly on 64-bit Windows. \
+Please consider using the 64-bit version of Regalter.\n\nIf you believe that our analysis is wrong and that you are using 32-bit Windows only, click \
+OK to proceed.", "Warning: Architecture mismatch", mboxconst.MB_OKCANCEL | mboxconst.MB_ICONWARNING | mboxconst.MB_DEFBUTTON2 | mboxconst.MB_SYSTEMMODAL) == mboxconst.IDCANCEL):
+            print ("Closed "+APP_NAME[0:APP_NAME.index(" ")]+" without any errors.")
+            raise SystemExit
+
     # Now we will try to extract the values of RegisteredOwner and RegisteredOrganization from the Windows Registry.
     # The required values are under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\.
 

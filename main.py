@@ -24,11 +24,10 @@ along with Regalter.  If not, see <https://www.gnu.org/licenses/>.
 
 import ctypes, sys, win32mboxconsts as mboxconst, tkinter as tk, winreg
 from time import sleep
-
-APP_NAME = "Regalter (64-bit)"
-
 import regalter as rg
-mbox = rg.mbox
+
+APP_NAME = rg.APP_NAME
+
 '''
 # Regalter is OS-architecture-specific, and this code is for the 64-bit version of Windows, so we will perform
 # an architecture checking below (Alhough this is not required because Windows(32-bit) automatically performs 
