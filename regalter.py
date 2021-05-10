@@ -653,8 +653,7 @@ if (__name__ == '__main__'):
             
             gui.update_update_names_button_state() # Update the state of the Update Names button
             
-            gui.root_window.update() # Force tkinter to apply the above updates. If this line is missing, the root
-                                     # window will not be visible
+            gui.root_window.update() # Force tkinter to apply the above updates.
                                      
             sleep(0.01) # This would prevent high CPU usage because of the main loop
 
