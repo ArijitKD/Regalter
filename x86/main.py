@@ -42,21 +42,6 @@ def Windows_is_WOW64():
     except:
         return -1
 
-'''
-# Regalter is OS-architecture-specific, and this code is for the 64-bit version of Windows, so we will perform
-# an architecture checking below (Alhough this is not required because Windows(32-bit) automatically performs 
-# an arcitecture check before executing a program, and Windows(64-bit) will obviously execute it. This is just
-# for the sake of clarity about how Regalter works).
-
-if (architecture()[0] != '64bit'):
-    mbox(0, APP_NAME[0:APP_NAME.index(":")]+" cannot run properly on the version of Windows you\'re running. \
-    Check your computer's system information to see whether you need an x86 (32-bit) or x64 (64-bit) version of "+APP_NAME[0:APP_NAME.index(":")]+", \
-    and then reinstall the correct version of "+APP_NAME[0:APP_NAME.index(":")]+".", "Error: Architechture Mismatch", mboxconst.MB_OK | mboxconst.MB_ICONERROR | mboxconst.MB_TASKMODAL)
-    print ("Closed "+APP_NAME[0:APP_NAME.index(":")]+" without any errors.")
-    raise SystemExit # Will close Regalter if the Regalter's architecture and OS architecture doesn't match
-'''
-# The commented out code fragment above does not work properly
-
 # Now to be able to make changes to the Registry, Regalter must be run with administrative previleges. The check
 # below ensures that the user starting Regalter is an administrator.
 
@@ -117,43 +102,6 @@ OK to proceed.", "Warning: Architecture mismatch", mboxconst.MB_OKCANCEL | mboxc
     winreg.CloseKey(regkey) # Closing the Registry key
 
     
-    '''
-    # Now we will try to extract the values of RegisteredOwner and RegisteredOrganization for 32-bit programs.
-    # The required values are under HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\.
-
-    regkey = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r'SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion',
-                            0, winreg.KEY_ALL_ACCESS) # Opening the required Registry key.
-
-    try:
-       Initial_RegisteredOwner_x86 = winreg.QueryValueEx(regkey, "RegisteredOwner")[0] # QueryValueEx() returns a tuple whose first
-                                                                                       # element is the required value.
-                                                                 
-    # If the RegisteredOwner value is not found then Python will raise FileNotFoundError.
-    except FileNotFoundError:
-       print ("Warning: Missing RegisteredOwner value. Creating it.") # Just to notify that RegisteredOwner is missing
-                                                                      # and that it will be created.
-
-       winreg.SetValueEx(regkey, 'RegisteredOwner', 0, winreg.REG_SZ, 'user name') # 'user name' is the value which
-                                                                                   # is shown by defaultin winver.exe
-                                                                                   # when the RegisteredOwner value
-                                                                                   # is missing from the Registry.
-       Initial_RegisteredOwner_x86 = winreg.QueryValueEx(regkey, "RegisteredOwner")[0]
-
-    try:
-       Initial_RegisteredOrganization_x86 = winreg.QueryValueEx(regkey, "RegisteredOrganization")[0]
-    except FileNotFoundError:
-       print ("Warning: Missing RegisteredOrganization value. Creating it.") # Just to notify that RegisteredOrganization is missing
-                                                                             # and that it will be created.
-                                                                          
-       winreg.SetValueEx(regkey, 'RegisteredOrganization', 0, winreg.REG_SZ, 'org name') # 'org name' is the value which
-                                                                                         # is shown by default in winver.exe 
-                                                                                         # when the RegisteredOrganization
-                                                                                         # value is missing from the Registry.
-       Initial_RegisteredOrganization_x86 = winreg.QueryValueEx(regkey, "RegisteredOrganization")[0]
-    winreg.CloseKey(regkey) # Closing the Registry key
-    '''
-
-    
     # Initalize Regalter window and create an object of Regalter class
     gui = rg.Regalter(Initial_RegisteredOwner = Initial_RegisteredOwner,
                       Initial_RegisteredOrganization = Initial_RegisteredOrganization)
@@ -171,9 +119,8 @@ OK to proceed.", "Warning: Architecture mismatch", mboxconst.MB_OKCANCEL | mboxc
             
            gui.update_update_names_button_state() # Update the state of the Update Names button
             
-           gui.root_window.update() # Force tkinter to apply the above updates. If this line is missing, the root
-                                    # window will not be visible
-
+           gui.root_window.update() # Force tkinter to apply the above updates
+           
            sleep(0.01) # This would prevent high CPU usage because of the main loop
 
         except KeyboardInterrupt: # The program must not be interrupted

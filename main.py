@@ -28,21 +28,6 @@ import regalter as rg
 
 APP_NAME = rg.APP_NAME
 
-'''
-# Regalter is OS-architecture-specific, and this code is for the 64-bit version of Windows, so we will perform
-# an architecture checking below (Alhough this is not required because Windows(32-bit) automatically performs 
-# an arcitecture check before executing a program, and Windows(64-bit) will obviously execute it. This is just
-# for the sake of clarity about how Regalter works).
-
-if (architecture()[0] != '64bit'):
-    mbox(0, APP_NAME[0:APP_NAME.index(":")]+" cannot run properly on the version of Windows you\'re running. \
-    Check your computer's system information to see whether you need an x86 (32-bit) or x64 (64-bit) version of "+APP_NAME[0:APP_NAME.index(":")]+", \
-    and then reinstall the correct version of "+APP_NAME[0:APP_NAME.index(":")]+".", "Error: Architechture Mismatch", mboxconst.MB_OK | mboxconst.MB_ICONERROR | mboxconst.MB_TASKMODAL)
-    print ("Closed "+APP_NAME[0:APP_NAME.index(":")]+" without any errors.")
-    raise SystemExit # Will close Regalter if the Regalter's architecture and OS architecture doesn't match
-'''
-# The commented out code fragment above does not work properly
-
 # Now to be able to make changes to the Registry, Regalter must be run with administrative previleges. The check
 # below ensures that the user starting Regalter is an administrator.
 
@@ -146,8 +131,7 @@ else:
             
            gui.update_update_names_button_state() # Update the state of the Update Names button
             
-           gui.root_window.update() # Force tkinter to apply the above updates. If this line is missing, the root
-                                    # window will not be visible
+           gui.root_window.update() # Force tkinter to apply the above updates
 
            sleep(0.01) # This would prevent high CPU usage because of the main loop
 
