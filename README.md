@@ -41,6 +41,14 @@ install some of the modules used before you can run the program. You can install
 
 You also must have Python 3.5.0 or above installed on your system.
 
+To build Regalter, you must run the `setup.py` scripts in the corresponding directories.
+Before you do this, make sure you have cx-Freeze installed along with Python. If not, then
+open up a terminal and install cx-freeze using the command `pip install cx_freeze`. Then
+open a terminal in the directory of the `setup.py` script and issue the following command:
+`python setup.py build`. After the build is complete you will find a folder named `build`.
+This will contain a folder which will contain Regalter as an executable (`regalter_x64.exe`
+or `regalter_x86.exe`).
+
 ## Copyright notice
 Here is the notice which has been included with all the source code files:
 ```
