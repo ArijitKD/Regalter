@@ -32,15 +32,14 @@ and will only be able to modify the values under `HKLM\SOFTWARE\WOW6432Node\Micr
 not accessible to 32-bit applications on 64-bit Windows. Hence, it is recommended to check your Windows architecture before using either the
 32-bit or 64-bit version of Regalter and make sure that the architectures of Windows and Regalter match to get the correct results.
 
-Regalter has only been tested on Windows 7 and Windows 10, but it should work on the previous versions of Windows too (although I'm
-not sure about the previous ones), just informing this in (the highly unlikely) case someone is interested in rigorously testing
-out my code's compatibility. Please note that you may need to install some of the modules used before you can run the program. You
-can install them through pip, using the following commands in a terminal:
+Regalter has only been tested on Windows 7 and Windows 10. **Only systems having Windows Vista or later are supported**, just informing this
+in (the highly unlikely) case someone is interested in rigorously testing out my code's compatibility. Please note that you may need to 
+install some of the modules used before you can run the program. You can install them through pip, using the following commands in a terminal:
 
 * `pip install <module_name>` (if Python is added to PATH),
 * `<path_to_pip>\pip.exe install <module_name>` (if Python is not added to PATH).
 
-You also must have Python 3.0.0 or above installed on your system.
+You also must have Python 3.5.0 or above installed on your system.
 
 ## Copyright notice
 Here is the notice which has been included with all the source code files:
