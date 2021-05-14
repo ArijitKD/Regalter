@@ -11,7 +11,7 @@ PC's ownership to someone else and he/she wishes to change the registered owner 
 for the user.
 
 ## Description
-There are two versions of the source files, 64-bit and 32-bit. The 32-bit source files are in the directory named 'x86'. The
+There are two versions of the source files, 64-bit and 32-bit. The 32-bit source files are in the directory named `x86`. The
 existence of different source files (almost similar though) for 32-bit and 64-bit versions of Regalter is due to the different architectures
 of Windows Registry for 32-bit and 64-bit Windows. To learn more about 32-bit and 64-bit Registry, refer to the links below:
 
@@ -32,6 +32,7 @@ and will only be able to modify the values under `HKLM\SOFTWARE\WOW6432Node\Micr
 not accessible to 32-bit applications on 64-bit Windows. Hence, it is recommended to check your Windows architecture before using either the
 32-bit or 64-bit version of Regalter and make sure that the architectures of Windows and Regalter match to get the correct results.
 
+## System requirements
 Regalter has only been tested on Windows 7 and Windows 10. **Only systems having Windows Vista or later are supported**, just informing this
 in (the highly unlikely) case someone is interested in rigorously testing out my code's compatibility. Please note that you may need to 
 install some of the modules used before you can run the program. You can install them through pip, using the following commands in a terminal:
@@ -41,6 +42,7 @@ install some of the modules used before you can run the program. You can install
 
 You also must have Python 3.5.0 or above installed on your system.
 
+## Building Regalter
 To build Regalter, you must run the `setup.py` scripts in the corresponding directories.
 Before you do this, make sure you have cx-Freeze installed along with Python. If not, then
 open up a terminal and install cx-freeze using the command `pip install cx_freeze`. Then
