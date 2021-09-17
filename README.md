@@ -33,23 +33,9 @@ not accessible to 32-bit applications on 64-bit Windows. Hence, it is recommende
 32-bit or 64-bit version of Regalter and make sure that the architectures of Windows and Regalter match to get the correct results.
 
 ## System requirements
-Regalter has only been tested on Windows 7 and Windows 10. **Only systems having Windows Vista or later are supported**, just informing this
-in (the highly unlikely) case someone is interested in rigorously testing out my code's compatibility. Please note that you may need to 
-install some of the modules used before you can run the program. You can install them through pip, using the following commands in a terminal:
-
-* `pip install <module_name>` (if Python is added to PATH),
-* `<path_to_pip>\pip.exe install <module_name>` (if Python is not added to PATH).
-
-You also must have Python 3.5.0 or above installed on your system.
-
-## Building Regalter
-To build Regalter, you must run the `setup.py` scripts in the corresponding directories.
-Before you do this, make sure you have cx-Freeze installed along with Python. If not, then
-open up a terminal and install cx-freeze using the command `pip install cx_freeze`. Then
-open a terminal in the directory of the `setup.py` script and issue the following command:
-`python setup.py build`. After the build is complete you will find a folder named `build`.
-This will contain a folder which will contain Regalter as an executable (`regalter_x64.exe`
-or `regalter_x86.exe`).
+* 100 MB of free disk space, and other usual hardware requirements any software has;
+* Windows XP (Service Pack 3) or newer Windows operating system;
+* Microsoft Visual C++ 2015-19 redistributable.
 
 ## Copyright notice
 Here is the notice which has been included with all the source code files:
@@ -69,5 +55,6 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ```
+
 ## Contact
 For any suggestions or for reporting bugs, please send an e-mail to arijitkdgit.official@gmail.com.
