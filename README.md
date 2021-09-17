@@ -35,7 +35,7 @@ not accessible to 32-bit applications on 64-bit Windows. Hence, it is recommende
 ## System requirements
 * 100 MB of free disk space, and other usual hardware requirements any software has;
 * Windows XP (Service Pack 3) or newer Windows operating system;
-* Microsoft Visual C++ 2015-19 redistributable.
+* Microsoft Visual C++ 2010, 2013, 2015-19 redistributable.
 
 ## Copyright notice
 Here is the notice which has been included with all the source code files:
