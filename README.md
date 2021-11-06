@@ -4,14 +4,14 @@ Regalter: A simple utility for changing the registered owner and registered orga
 
 ## Possible uses of Regalter
 The recent releases of Windows 10 does not allow the user to enter the user and organization names during installation. Instead it
-asks the user to sign in with his/her Microsoft account. The user and organization names are extracted from the user's Microsoft
-account information. However, if the user skips signing in to his/her Microsoft account then the organization name is not written
-to the Windows Registry. That is when you need a simple tool like Regalter. Again, when the user wishes to transfer his/her Windows
-PC's ownership to someone else and he/she wishes to change the registered owner and organization names, Regalter makes the work easy
+asks them to sign in with their Microsoft account. The user and organization names are extracted from their Microsoft account
+information. However, if the user skips signing in to their Microsoft account then the organization name is not written
+to the Windows Registry. That is when a simple tool like Regalter is needed. Again, when the user wishes to transfer their Windows
+PC's ownership to someone else and they wish to change the registered owner and organization names, Regalter makes the work easy
 for the user.
 
 ## Description
-There are two versions of the source files, 64-bit and 32-bit. The 32-bit source files are in the directory named `x86`. The
+There are two versions of the source files, 64-bit and 32-bit. The 32-bit source files are in the directory named *x86*. The
 existence of different source files (almost similar though) for 32-bit and 64-bit versions of Regalter is due to the different architectures
 of Windows Registry for 32-bit and 64-bit Windows. To learn more about 32-bit and 64-bit Registry, refer to the links below:
 
@@ -35,10 +35,10 @@ not accessible to 32-bit applications on 64-bit Windows. Hence, it is recommende
 ## System requirements
 * 100 MB of free disk space, and other usual hardware requirements any software has;
 * Windows XP (Service Pack 3) or newer Windows operating system;
-* Microsoft Visual C++ 2010, 2013, 2015-19 redistributable.
+* Microsoft Visual C++ 2010, 2013, 2015-2019 redistributable.
 
 ## Copyright notice
-Here is the notice which has been included with all the source code files:
+Here is the notice which has been included with all the source files:
 ```
 Copyright (C) 2021 Arijit Kumar Das (Github: @ArijitKD)
 
