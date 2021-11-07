@@ -91,7 +91,7 @@ class Regalter:
         # The code fragment below is no longer required
         '''
         # We are storing the co-ordinates of the root window's position when it is created in the two variables below.
-        # This will be used later in function fto prevent the user from re-positioning the window on the screen.
+        # This will be used later in function to prevent the user from re-positioning the window on the screen.
         self.fixed_rootwinpos_x = self.root_window.winfo_x()
         self.fixed_rootwinpos_y = self.root_window.winfo_y()
         '''
