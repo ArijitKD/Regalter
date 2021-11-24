@@ -1,6 +1,6 @@
-# regalter-utility
+# Regalter
 
-Regalter: A simple utility for changing the registered owner and registered organization names without messing with Windows registry.
+A simple utility for changing the registered owner and registered organization names without messing with Windows registry.
 
 ## Possible uses of Regalter
 The recent releases of Windows 10 does not allow the user to enter the user and organization names during installation. Instead it
