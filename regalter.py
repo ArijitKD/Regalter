@@ -6,8 +6,6 @@ exclusively for running on 64-bit Windows.
 
 This file is a part of Regalter.
 
-Copyright (C) 2021 Arijit Kumar Das (Github: @ArijitKD)
-
 Regalter is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -209,13 +207,13 @@ class Regalter:
     def about_button(self):
         mbox(0,'''
 Regalter (64-bit)
-Version 1.0.0
-Copyright (C) 2021 Arijit Kumar Das (Github: @ArijitKD)
-
+Version 1.0.2
 
 Regalter: A simple utility for changing the registered owner and
 registered organization names without messing with Windows registry.
 Regalter (64-bit) is exclusively for running on 64-bit Windows.
+
+Regalter is developed by Arijit Kumar Das (GitHub: @ArijitKD).
 
 Regalter is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
