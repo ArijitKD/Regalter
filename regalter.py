@@ -211,6 +211,7 @@ class Regalter:
 Regalter (64-bit)
 Version 1.0.2
 
+
 Regalter: A simple utility for changing the registered owner and
 registered organization names without messing with Windows registry.
 Regalter (64-bit) is exclusively for running on 64-bit Windows.
