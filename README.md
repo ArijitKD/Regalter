@@ -37,10 +37,10 @@ not accessible to 32-bit applications on 64-bit Windows. Hence, it is recommende
 * Windows XP (Service Pack 3) or newer Windows operating system;
 * Microsoft Visual C++ 2010, 2013, 2015-2019 redistributable.
 
-## Copyright notice
+## Copyleft notice
 Here is the notice which has been included with all the source files:
 ```
-Copyright (C) 2021 Arijit Kumar Das (Github: @ArijitKD)
+Regalter is developed by Arijit Kumar Das (GitHub: @ArijitKD)
 
 Regalter is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
